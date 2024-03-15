@@ -13,4 +13,4 @@ PyShells is a command-line interface (CLI) tool inspired by [https://www.revshel
 ### Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/python-cli-revshells.git
+   git clone https://github.com/Sergeant-Soda/PyShells.git
