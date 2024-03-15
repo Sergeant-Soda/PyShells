@@ -7,6 +7,7 @@
 #  python3 pyshells.py <interface OR ip> <port> <shell-#-choice>
 #  Use --shells to view a list of available shells 
 #  Example: python pyshells.py eth0 9001 6
+#  Example: python pyshells.py 192.168.20.15 8081 2
 
 #!/usr/bin/python3
 import socket
