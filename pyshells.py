@@ -208,13 +208,17 @@ def ScriptUsage():
     print("Usage: python3", os.path.basename(__file__), "<interface OR ip> <port> <shell-#-choice>")
     print("\n Use: python3", os.path.basename(__file__), "--shells for a list of available shells.")
 
+
 if __name__ == "__main__":
     if "--shells" in sys.argv:
         counter = 1
         print("\nList of available shell types:\n##############################################\n")
-        for shell in shell_types:
-            print(f"{counter}.) {shell}", end='\n')
-            counter += 1
+        shells_per_line = 2  # Number of shells to print per line
+        max_shell_length = max(len(shell) for shell in shell_types) + 5  # Fixed width for each shell item
+        for i in range(0, len(shell_types), shells_per_line):
+            shells_on_line = shell_types[i:i+shells_per_line]
+            print('\t'.join([f"{counter}.) {shell.ljust(max_shell_length)}" for counter, shell in enumerate(shells_on_line, start=counter)]))
+            counter += shells_per_line
         sys.exit(0)
 
     if len(sys.argv) != 4:
