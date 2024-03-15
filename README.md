@@ -1,4 +1,4 @@
-# Python CLI Revshells
+# PyShells: A Python CLI for Revshells
 
 PyShells is a command-line interface (CLI) tool inspired by [https://www.revshells.com](https://www.revshells.com/). It allows users to generate reverse shell payloads in various programming languages for penetration testing and read teaming purposes.
 
